@@ -5,10 +5,11 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { PedidosService } from '../../services/pedidos-service';
 import { Subscription } from 'rxjs';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-pedidos',
-  imports: [MatButtonModule, MatTableModule, MatPaginatorModule],
+  imports: [MatButtonModule, MatTableModule, MatPaginatorModule, RouterLink],
   templateUrl: './pedidos.html',
   styleUrl: './pedidos.css',
 })

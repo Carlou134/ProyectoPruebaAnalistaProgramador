@@ -1,14 +1,10 @@
-import { Estado } from "../Helpers/Enums";
-
-export interface Pedido{
-  Id: number,
-  NumeroPedido: string,
-  PrecioTotal: number,
-  FechaPedido: Date,
-  Estado: Estado,
-  Observaciones: String,
-  FechaCreacion: Date,
-  FechaActualizacion: Date
+export interface Pedido {
+  id: number;
+  numeroPedido: string;
+  precioTotal: number;
+  fechaPedido: string;
+  estado: number;
+  observaciones: string;
+  fechaCreacion: string;
+  fechaActualizacion: string;
 }
-
-

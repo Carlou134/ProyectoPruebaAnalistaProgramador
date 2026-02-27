@@ -34,4 +34,18 @@ export class Pedidos implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.sub.unsubscribe();
   }
+
+  delete(Id:number){
+    if(Id > 0){
+      this.pS.DeletePedido(Id).subscribe({
+        next: () =>{
+          console.log("Registro eliminado con éxito");
+          this.dataSource.data = this.dataSource.data.filter(p => p.id !== Id)
+        },
+        error: (err) => {
+          console.error(err);
+        }
+      })
+    }
+  }
 }
